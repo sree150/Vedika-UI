@@ -1,24 +1,33 @@
-<body><nav class="navbar navbar-expand-lg py-0 navbar-white bg-white shadow-sm">
-    <div class="container">
-        <a href="#" class="navbar-brand">
-            <!--Logo Image -->
-            <img src="../../assets/Images/VedikaLogo1.png" alt="Vedikas" width="160px" height="50px" alt=""
-                class="logo">
-            <!-- Logo Text-->
-            <!-- <span class="text-uppercase font-weight-bold">Vedikas</span> -->
-        </a>
-    </div>
+<body>
+    <nav class="navbar navbar-expand-lg py-0 navbar-white bg-white">
+        <div class="container">
+            <a href="#" class="navbar-brand">
+                <!--Logo Image -->
+                <img src="../../assets/Images/VedikaLogo1.png" alt="Vedikas" width="160px" height="50px" alt=""
+                    class="logo">
+                <!-- Logo Text-->
+                <!-- <span class="text-uppercase font-weight-bold">Vedikas</span> -->
+            </a>
+        </div>
+        <div ngbDropdown class="d-inline-block col-sm-1">
+            <button class="btn btn-outline-primary" id="dropdownBasic1" ngbDropdownToggle >Login</button>
+            <div ngbDropdownMenu aria-labelledby="dropdownBasic1">
+                <a routerLink="/login" >  <button ngbDropdownItem>User Login</button></a>
+                <a routerLink="/login"> <button ngbDropdownItem>Owner Login</button></a>
+            </div>
+          </div>
+          <div ngbDropdown class="d-inline-block col-sm-2">
+            <button class="btn btn-outline-primary" id="dropdownBasic1" ngbDropdownToggle>Help</button>
+            <div ngbDropdownMenu aria-labelledby="dropdownBasic1">
+                <a routerLink="/help"><button ngbDropdownItem>User Help</button></a>
+                <a routerLink="/help"> <button ngbDropdownItem>Owner Help</button></a>
+            </div>
+          </div>
+          
 
-    <ul class="nav navbar-nav navbar-right">
-        <li><a routerLink="/login" routerLinkActive="active"><span class="glyphicon glyphicon-log-in">
-                    Login</span></a></li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-        <li><a routerLink="/help" routerLinkActive="active"><span class="glyphicon glyphicon-user"></span>Help</a></li>
+   
+        </nav>
+    <app-searchbar></app-searchbar>
+    <app-footer></app-footer>
 
-
-    </ul>
-    
-</nav>
-
-<app-searchbar></app-searchbar>
-<app-footer></app-footer>
 </body>

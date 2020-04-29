@@ -1,7 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
-import { AppRoutingModule,routingcomponent } from './app-routing.module';
+import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { FooterComponent } from './footer/footer.component';
 import { HttpClientModule } from '@angular/common/http';
@@ -14,7 +14,7 @@ import { Ng2SearchPipeModule } from 'ng2-search-filter';
 import { FormsModule } from '@angular/forms';
 import { FunctionhallComponent } from './functionhall/functionhall.component';
 import { SearchService } from './search.service';
-
+import  { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 
 @NgModule({
@@ -24,16 +24,17 @@ import { SearchService } from './search.service';
     HelpComponent,
     LoginComponent,
     SearchbarComponent,
-    routingcomponent,
     HeaderComponent,
     FunctionhallComponent,
     
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule,FormsModule,
-    Ng2SearchPipeModule,HttpClientModule
-    
+    AppRoutingModule,
+    FormsModule,
+    Ng2SearchPipeModule,
+    HttpClientModule,
+    NgbModule,
   ],
 
   providers: [SearchService
