@@ -1,14 +1,203 @@
 
+    /* Datepicker popup icon */
 
+button.calendar, button.calendar:active {
+  width: 2.75rem;
+  background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACIAAAAcCAYAAAAEN20fAAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAAAOxAAADsQBlSsOGwAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAEUSURBVEiJ7ZQxToVAEIY/YCHGxN6XGOIpnpaEsBSeQC9ArZbm9TZ6ADyBNzAhQGGl8Riv4BLAWAgmkpBYkH1b8FWT2WK/zJ8ZJ4qiI6XUI3ANnGKWBnht2/ZBDRK3hgVGNsCd7/ui+JkEIrKtqurLpEWaphd933+IyI3LEIdpCYCiKD6HcuOa/nwOa0ScJEnk0BJg0UTUWJRl6RxCYEzEmomsIlPU3IPW+grIAbquy+q6fluy/28RIBeRMwDXdXMgXLj/B2uimRXpui4D9sBeRLKl+1N+L+t6RwbWrZliTTTr1oxYtzVWiTQAcRxvTX+eJMnlUDaO1vpZRO5NS0x48sIwfPc87xg4B04MCzQi8hIEwe4bl1DnFMCN2zsAAAAASUVORK5CYII=') !important;
+  background-repeat: no-repeat;
+  background-size: 23px;
+  background-position: center;
+}
 
+/* Sortable table demo */
 
+th[sortable] {
+  cursor: pointer;
+  user-select: none;
+  -webkit-user-select: none;
+}
 
+/*  */
 
-
-.react-destination-typeahead[_ngcontent-eyq-c49] .search-destination-results-container[_ngcontent-eyq-c49] .result[_ngcontent-eyq-c49] {
+search__result.last {
+  border-bottom: 1px solid #d3d8de;
+}
+.react-destination-typeahead .search-destination-results-container .result--has-icon-has-input-icon {
+  padding-left: 22px;
+  padding-right: 22px;
+}
+.react-destination-typeahead .search-destination-results-container .result--two-line-display {
+  font-size: 15px;
+  line-height: 20px;
+  padding: 6px 22px 6px 16px;
+}
+.react-destination-typeahead .search-destination-results-container .result {
   background-color: transparent;
   display: block;
-  padding: unset;
+  padding: 8px 22px 8px 16px;
+  font-weight: 400;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+}
+.react-destination-typeahead .search-destination-results-container .result.recent-search__result span {
+    color: #609;
+}
+
+.react-destination-typeahead .search-destination-results-container .result .highlighted {
+    font-weight: 700;
+}
+
+.react-destination-typeahead .search-destination-results-container {
+  width: auto;
+  color: #5e6d77;
+  /* padding: 8px 0; */
+  transform-origin: 50px -9px;
+}
+.react-destination-typeahead .search-destination-input {
+  cursor: pointer;
+  flex: 1;
+}
+.react-destination-typeahead {
+  position: relative;
+  background-color: #fff;
+  border-radius: 4px;
+  text-align: left;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  z-index: 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* .quantity-selector {
+  display: flex;
+  position: relative;
+  align-items: center;
+  align-content: flex-end;
+}
+*, :after, :before {
+  box-sizing: border-box;
+}
+user agent stylesheet
+div {
+  display: block;
+}
+.Tooltip__inner {
+  display: block;
+  max-width: 240px;
+  padding: 8px 16px;
+  text-align: left;
+  text-decoration: none;
+  background-color: #292929;
+  border-radius: 4px;
+  box-shadow: 0 8px 15px 0 rgba(0,0,0,.1);
+}
+.Tooltip {
+  position: absolute;
+  z-index: 1070;
+  display: block;
+  visibility: visible;
+  font-size: 16px;
+  opacity: 0;
+}
+
+ */
+
+
+
+
+
+
+element.style {
+  display: block;
+  width: 400px;
+  left: -106.836px;
+  top: 60px;
+}
+.Tooltip--popover.Tooltip--bottom {
+  margin-top: 13px;
+}
+.Tooltip.in {
+  opacity: 1;
+}
+.fade.in {
+  opacity: 1;
+}
+.guest-picker__popover {
+  min-width: 400px;
+  max-width: 1000px;
+  padding: 45px 31px 32px;
+}
+.Tooltip--popover {
+  border: 1px solid #ddddde;
+  border-radius: 4px;
+  box-shadow: 0 8px 15px 0 rgba(0,0,0,.1);
+  padding: 1px;
+}
+.Tooltip--popover, .Tooltip--popover .Tooltip__inner {
+  background-color: #fff;
+}
+.Tooltip--bottom {
+  padding: 8px 0;
+  margin-top: 3px;
+}
+.Tooltip {
+  position: absolute;
+  z-index: 1070;
+  display: block;
+  visibility: visible;
+  font-size: 16px;
+  opacity: 0;
+}
+
+.fade {
+  opacity: 0;
+  transition: opacity .35s linear;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+.search-destination-results-container {
+  background-color: ffff;
+  display: block;
+  /* padding: unset; */
   font-weight: 400;
   position: relative;
   overflow: hidden;

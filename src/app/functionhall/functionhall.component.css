@@ -36,3 +36,47 @@ body, html {
     padding-bottom: 100px;
 }
 /* </style> */
+
+.panel-heading {
+  padding: 100px;
+  border-bottom: 1px solid transparent;
+  border-top-left-radius: 3px;
+  border-top-right-radius: 3px;
+position: relative;
+display: flex;
+overflow: hidden;
+text-decoration: none;
+outline: none;
+background-color: #ccc;
+background-position: 50%;
+/* background-repeat: no-repeat; */
+background-size: cover;
+width: 25%;
+height: 100%;
+}
+
+
+
+Hit a.media-flex__content {
+  font-size: inherit;
+  padding: 0;
+  width: 50%;
+}
+.Hit a.media-flex__content {
+  color: inherit;
+  position: relative;
+  overflow: visible;
+  font-size: .875rem;
+  padding: 4px 12px 8px;
+}
+
+.media-flex__content {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+a {
+  color: #2474de;
+  text-decoration: none;
+  font-weight: 400;
+}

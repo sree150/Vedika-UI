@@ -5,11 +5,13 @@ import { HelpComponent } from './help/help.component';
 import { SearchbarComponent } from './searchbar/searchbar.component';
 import { HeaderComponent } from './header/header.component';
 import { FunctionhallComponent } from './functionhall/functionhall.component';
-
+import { authGuards } from './auth.guard';
 
 const routes: Routes = [
   {path:'',redirectTo:'/header',pathMatch:'full'},
-  { path:'login', component:LoginComponent},
+  { path:'login', component:LoginComponent,
+    canActivate:[authGuards],canActivateChild:[authGuards]},
+    
   { path:'help', component:HelpComponent},
   { path:'header',component:HeaderComponent},
   {path: 'searchbar', component: SearchbarComponent},

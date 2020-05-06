@@ -1,25 +1,4 @@
-<!-- <body> -->
-<!-- <div class="header"> -->
 <div class="bg-wrapper home-banner text-center" style="background-image:url('../../assets/Images/image1.jpg')">
-  <!-- <div class="container py-3 text-center">
-    <h1 class="display-5 font-weight-bold">Discover The Perfect Place For<br><b> A Great Occasion</b></h1>
-    <form class="navbar-form navbar-left">
-      <div class="input-group">
-        <input class="form-control" type="text" (click)="onSearch()" [(ngModel)]="query" name="query"
-          placeholder="&#61442;  Start searching for a functionhall by id or name or City">
-        <button (click)="onSearch()" type="button" class="btn btn-success">Search</button>
-        <form class="container">
-          <div class="card" style="width: 18rem;">
-            <div class="card-body">
-              <ul *ngFor="let item of filteredData">
-                <li (click)="onSelect(item)"> {{ item.name }}</li>
-              </ul>
-            </div>
-          </div>
-        </form>
-
-      </div>
-    </form> --> -->
   <div class="container py-3 text-center">
     <h2 class="display-4 font-weight-bold"><i>Discover The Perfect Place For<br><b> A Great Occasion</b></i></h2>
     <form class="search-form search-form--feature search-form--center">
@@ -29,27 +8,6 @@
             <div class="sr-only" aria-atomic="true" aria-live="polite" role="status"><span aria-hidden="true">,,</span>
             </div>
             <div class="search-destination-input" role="combobox" aria-haspopup="listbox" aria-expanded="false">
-              <!-- <div role="presentation" class="search-destination-input__header state--closed">
-                  <div
-                    class="search-destination-input__header__inputs form-group has-feedback floating-label not-empty has-icon"
-                    data-toggle="label"><label for="react-destination-typeahead">Start searching for a Functionhall by
-                      Id or
-                      Name or City</label>
-                    <input type="text" (click)="onSearch()" [(ngModel)]="query" name="query"
-                      id="react-destination-typeahead" size="10" tabindex="0" placeholder="Where" class=" form-control"
-                      autocomplete="off" aria-autocomplete="both">
-
-                    <span class="form-control-icon search-destination-input__icon"><span
-                        class="SVGIcon SVGIcon--24px search-form__icon"><svg focusable="false"
-                          data-id="SVG_LOCATION__24" width="24" height="24" viewBox="0 0 24 24">
-                          <g fill="none" stroke-linecap="round" stroke-linejoin="round">
-                            <path
-                              d="M6.45 13.47a6.75 6.75 0 0 1 .73-8.7l.05-.04a6.75 6.75 0 0 1 9.54 0l.05.05a6.75 6.75 0 0 1 .73 8.7L12 21.24l-5.55-7.78z">
-                            </path>
-                            <path d="M14.24 9.55a2.24 2.24 0 1 1-4.48 0 2.24 2.24 0 0 1 4.48 0z"></path>
-                          </g>
-                        </svg></span></span></div>
-                </div> -->
 
               <div class="search-destination-input" role="combobox" aria-haspopup="listbox" aria-expanded="true"
                 aria-controls="Typeahead__results">
@@ -57,13 +15,13 @@
                   <div
                     class="search-destination-input__header__inputs form-group has-feedback floating-label not-empty has-icon"
                     data-toggle="label">
-            <label for="react-destination-typeahead">Start searching for a
+                    <label for="react-destination-typeahead">Start searching for a
                       Functionhall by
                       Id or
                       Name or City</label><input type="text" (click)="onSearch()" [(ngModel)]="query" name="query"
                       id="react-destination-typeahead" size="10" tabindex="0" placeholder="Where" class=" form-control"
                       autocomplete="off" aria-autocomplete="both">
-              <span class="form-control-icon search-destination-input__icon"><span
+                    <span class="form-control-icon search-destination-input__icon"><span
                         class="SVGIcon SVGIcon--24px search-form__icon"><svg focusable="false"
                           data-id="SVG_LOCATION__24" width="24" height="24" viewBox="0 0 24 24"
                           xmlns="http://www.w3.org/2000/svg">
@@ -74,14 +32,8 @@
                             <path d="M14.24 9.55a2.24 2.24 0 1 1-4.48 0 2.24 2.24 0 0 1 4.48 0z"></path>
                           </g>
                         </svg></span></span>
-                        <!-- <button aria-label="Clear Search"
-                      class="form-control-feedback search-destination-input__close" tabindex="0"><span
-                        class="SVGIcon SVGIcon--16px"><svg focusable="false" data-id="SVG_CLOSE__16" width="16"
-                          height="16" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
-                          <path d="M12.5 12.5l-9-9m9 0l-9 9" fill="none" stroke-linecap="round" stroke-linejoin="round">
-                          </path>
-                        </svg></span></button> -->
-                      </div>
+
+                  </div>
                 </div>
                 <div class="search-destination-results-container pop-up-container" tabindex="-1"
                   style="min-width: auto; max-width: none;">
@@ -98,11 +50,10 @@
                           class="result__content">
 
 
-                          <span (click)="onSelect(item)" class="result__chars result__chars--truncate-term"><span
-                              class="result__char">{{ item.name }}
-                            </span><span class="result__char highlighted">{{ item.street }}</span><span
-                              class="result__char">,
-                              {{ item.city }}</span></span> </div>
+                          <span (click)="onSelect(item)" class="result__chars result__chars--truncate-term">
+                            <span class="result__char highlighted">{{ item.city }}</span>
+                            <span class="result__char">{{ item.state }}</span>
+                          </span> </div>
                       </div>
                     </div>
                   </div>
@@ -116,15 +67,35 @@
           <div class="date-range form-combined form-combined--dates"><span class=""
               style="display:block;outline:0;position:relative" role="presentation">
               <div class="form-combined-row">
+                <!-- <form class="form-inline">
+                <div class="form-group">
+                  <div class="input-group">
+                    <input class="form-control" placeholder="yyyy-mm-dd"
+                           name="dp" [(ngModel)]="model" ngbDatepicker #d="ngbDatepicker">
+                    <div class="input-group-append">
+                      <button class="btn btn-outline-secondary calendar" (click)="d.toggle()" type="button"></button>
+                    </div>
+                  </div>
+                </div>
+              </form> -->
                 <div class="form-group position-relative form-combined__input1">
-                  <div class="form-group floating-label empty has-icon"><input type="text"
-                      class="form-control form-control--arrival" aria-invalid="false" readonly=""
+                  <div class="form-group floating-label empty has-icon">
+                    <!-- <div class="input-group"> -->
+                    <input type="text" class="form-control form-control--arrival" aria-invalid="false" readonly=""
                       aria-label="Check-in date expanded. Choose a date from the table below. Tab into the table and use the arrow keys for navigation."
                       placeholder="Date" name="check-in" value="" data-wdio="date-range-input-start"
-                      id="input1-dates" /><label class="has-icon" for="input1-dates">Date</label><span
-                      class="form-control-icon"><span class="SVGIcon SVGIcon--24px search-form__icon"><svg
-                          focusable="false" data-id="SVG_CHECK_IN__24" xmlns="http://www.w3.org/2000/svg" width="24"
-                          height="24" viewBox="0 0 24 24">
+                      id="input1-dates" />
+                    <!-- <input class="form-control" placeholder="yyyy-mm-dd"
+                           name="dp" [(ngModel)]="model" ngbDatepicker #d="ngbDatepicker">
+                    <div class="input-group-append">
+                      <button class="btn btn-outline-secondary calendar" (click)="d.toggle()" type="button"></button>
+                    </div>
+                  </div> -->
+
+                    <label class="has-icon" for="input1-dates">Date</label>
+
+                    <span class="form-control-icon"><span class="SVGIcon SVGIcon--24px search-form__icon">
+                        <svg focusable="false" data-id="SVG_CHECK_IN__24" width="24" height="24" viewBox="0 0 24 24">
                           <g fill="none" fill-rule="evenodd">
                             <path fill="currentColor" stroke="none"
                               d="M15.6 18.1h2.5v-2.5h-2.5zM11.1 18.1h2.5v-2.5h-2.5zM6.6 18.1h2.5v-2.5H6.6z" />
@@ -136,16 +107,17 @@
                               d="M15.6 13.1h2.5v-2.5h-2.5zM11.1 13.1h2.5v-2.5h-2.5z" />
                             <path stroke-linecap="round" stroke-linejoin="round" d="M7.6 2.6v2m9-2v2m3.6 4h-9.6" />
                           </g>
-                        </svg></span></span></div>
+                        </svg>
+                      </span></span></div>
                   <div class="picker__overlay picker__overlay--selectable">
                   </div>
                 </div>
                 <div class="form-group position-relative form-combined__input2" aria-hidden="true">
                   <div class="form-group floating-label empty has-icon"><input type="text"
                       class="form-control form-control--departure DateRangePicker__FormInput-departure form-control--no-arrow"
-                      aria-invalid="false" readonly="" aria-label="Depart" placeholder="Depart" name="check-out"
-                      value="" data-wdio="date-range-input-end" tabindex="-1" id="input2-dates" /><label
-                      class="has-icon" for="input2-dates">Time</label><span class="form-control-icon"><span
+                      aria-invalid="false" readonly="" aria-label="Time" placeholder="Depart" name="check-out" value=""
+                      data-wdio="date-range-input-end" tabindex="-1" id="input2-dates" /><label class="has-icon"
+                      for="input2-dates">Time</label><span class="form-control-icon"><span
                         class="SVGIcon SVGIcon--24px search-form__icon"><svg class="svg-icon" viewBox="0 0 20 20">
                           <path
                             d="M10.25,2.375c-4.212,0-7.625,3.413-7.625,7.625s3.413,7.625,7.625,7.625s7.625-3.413,7.625-7.625S14.462,2.375,10.25,2.375M10.651,16.811v-0.403c0-0.221-0.181-0.401-0.401-0.401s-0.401,0.181-0.401,0.401v0.403c-3.443-0.201-6.208-2.966-6.409-6.409h0.404c0.22,0,0.401-0.181,0.401-0.401S4.063,9.599,3.843,9.599H3.439C3.64,6.155,6.405,3.391,9.849,3.19v0.403c0,0.22,0.181,0.401,0.401,0.401s0.401-0.181,0.401-0.401V3.19c3.443,0.201,6.208,2.965,6.409,6.409h-0.404c-0.22,0-0.4,0.181-0.4,0.401s0.181,0.401,0.4,0.401h0.404C16.859,13.845,14.095,16.609,10.651,16.811 M12.662,12.412c-0.156,0.156-0.409,0.159-0.568,0l-2.127-2.129C9.986,10.302,9.849,10.192,9.849,10V5.184c0-0.221,0.181-0.401,0.401-0.401s0.401,0.181,0.401,0.401v4.651l2.011,2.008C12.818,12.001,12.818,12.256,12.662,12.412">
@@ -177,6 +149,7 @@
                 </div>
                 <div class="picker__overlay picker__overlay--selectable"></div>
               </div>
+
             </span></div>
         </div>
         <button (click)="onSearch()" type="button"
@@ -188,29 +161,7 @@
               </svg></span><span>Search</span></span></button>
 
       </div>
-      <!-- <div style="min-width: 1000px; " class="search-destination-results-container pop-up-container"
-          tabindex="-1">
-          <div class="pop-up-container__arrows">
-            <div class="pop-up-container__arrow__outer pop-up-container__arrow"></div>
-          </div>
-          <div id="Typeahead__results" role="listbox" tabindex="-1" class="search-results-container no-anim">
-            <div>
-              <div tabindex="-1" data-suggestion-key="0"
-                class="result in recent-search__result last desktop result--no-icon-has-input-icon">
-                <div class="result__bg bg-brand"></div>
-                <div role="option" aria-selected="false" tabindex="-1" class="result__content">
-                  <ul *ngFor="let item of filteredData">
-                    <span (click)="onSelect(item)" class="result__char highlighted">{{ item.name }}</span></ul>
-                </div>
-              </div>
-
-            </div>
-          </div>
-        </div> -->
-
     </form>
 
   </div>
 </div>
-<!-- </div> -->
-<!-- </body> -->

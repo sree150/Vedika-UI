@@ -14,7 +14,8 @@ import { Ng2SearchPipeModule } from 'ng2-search-filter';
 import { FormsModule } from '@angular/forms';
 import { FunctionhallComponent } from './functionhall/functionhall.component';
 import { SearchService } from './search.service';
-import  { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import  { NgbModule,NgbDatepickerModule,NgbTimepickerModule } from '@ng-bootstrap/ng-bootstrap';
+import { authGuards } from './auth.guard';
 
 
 @NgModule({
@@ -34,10 +35,10 @@ import  { NgbModule } from '@ng-bootstrap/ng-bootstrap';
     FormsModule,
     Ng2SearchPipeModule,
     HttpClientModule,
-    NgbModule,
+    NgbModule,NgbDatepickerModule,NgbTimepickerModule
   ],
 
-  providers: [SearchService
+  providers: [SearchService,authGuards
   ],
   bootstrap: [AppComponent]
 })

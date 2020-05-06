@@ -6,12 +6,20 @@ import { ActivatedRoute } from '@angular/router';
   templateUrl: './functionhall.component.html',
   styleUrls: ['./functionhall.component.css']
 })
+// export class FunctionhallComponent implements OnInit {
+//   public data: any;
+//   constructor(private activatedRoute: ActivatedRoute) { }
+
+//   ngOnInit(): void {
+//     this.data = JSON.parse(this.activatedRoute.snapshot.params.data);
+//   }
+
 export class FunctionhallComponent implements OnInit {
-  public data: any;
+  public functionHalls: any;
   constructor(private activatedRoute: ActivatedRoute) { }
 
   ngOnInit(): void {
-    this.data = JSON.parse(this.activatedRoute.snapshot.params.data);
+    this.functionHalls = JSON.parse(this.activatedRoute.snapshot.params.functionHalls);
   }
 
 }
