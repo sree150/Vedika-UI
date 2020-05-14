@@ -1,6 +1,6 @@
 node {
 stage (‘Prepare environment’) {
-git branch: ‘development’, url: ‘https://github.com/sree150/Vedika-UI.git’
+ git url: 'https://github.com/sree150/Vedika-UI.git'
  }
     stage('nodejs Build'){
     def nodejsHome=tool name: 'nodejs', type: 'nodejs'
@@ -12,3 +12,5 @@ git branch: ‘development’, url: ‘https://github.com/sree150/Vedika-UI.git�
   sh ‘ng build’
   }
 }
+
+
