@@ -1,6 +1,6 @@
 node(){
     stage('Git checkout') {
-        git 'https://github.com/sureshsk-hub/vedikaUI.git'
+        git 'https://github.com/sree150/Vedika-UI.git'
     }
         
     stage('Install dependencies') {
@@ -10,4 +10,4 @@ node(){
     stage('Build') {
         sh label: '', script: 'ng build --prod'
         }
-     }
+      }
