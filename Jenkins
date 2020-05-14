@@ -1,0 +1,13 @@
+node {
+stage (‘Prepare environment’) {
+ git 'https://github.com/sree150/Vedika-UI.git'
+ }
+ 
+ stage('install packages and build'){
+  sh label: '', script: '''npm install
+ng build --prod'''
+ }
+} 
+
+
+
