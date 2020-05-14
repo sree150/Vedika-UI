@@ -1,5 +1,5 @@
 node {
-stage (‘Prepare environment’){
+stage ('Prepare environment'){
  git 'https://github.com/sree150/Vedika-UI.git'
  }
  
