@@ -5,9 +5,9 @@ node{
    stage('Install dependencies'){
      def nodejsHome = tool name: 'nodejs', type: 'nodejs'
    }
-   stage('build){
-     sh label: ' ', script: 'npm install -g@angular/cli'
- sh label: ' ', script: 'npm install
- sh label: ' ', script:  'ng serve --host 0.0.0.0
+   stage('build'){
+     sh label: ' ', script: 'npm install -g @angular/cli'
+ sh label: ' ', script: 'npm install'
+ sh label: ' ', script:  'ng serve --host 0.0.0.0'
     }
   }
