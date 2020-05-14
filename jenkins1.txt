@@ -1,13 +1,13 @@
-node(){
-    stage('Git checkout') {
-        git 'https://github.com/sree150/Vedika-UI.git'
+node{
+   stage('SCM Checkout'){
+       git credentialsId: 'git-creds', url: 'https://github.com/sree150/Vedika-UI.git'
+   }
+   stage('Install dependencies'){
+     def nodejsHome = tool name: 'nodejs', type: 'nodejs'
+   }
+   stage('build){
+     sh label: ' ', script: 'npm install -g@angular/cli'
+ sh label: ' ', script: 'npm install
+ sh label: ' ', script:  'ng serve --host 0.0.0.0
     }
-        
-    stage('Install dependencies') {
-        sh label: '', script: 'npm install'
-        }
-        
-    stage('Build') {
-        sh label: '', script: 'ng build --prod'
-        }
-      }
+  }
